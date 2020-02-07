@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StarWars</string>
+    <string name="please_enter_a_character_name">Character name</string>
+    <string name="search">search</string>
+    <string name="logo">logo</string>
+
+</resources>

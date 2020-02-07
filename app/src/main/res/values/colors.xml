@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4B1B1B</color>
+    <color name="colorPrimaryDark">#250909</color>
+    <color name="colorAccent">#801A1A</color>
+    <color name="edtSearchStrokeColor">#4B1B1B</color>
+    <color name="transparentLightBlueColor">#250909</color>
+    <color name="transparentBlueColor">#B4492D2D</color>
+</resources>
