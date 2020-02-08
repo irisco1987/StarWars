@@ -26,6 +26,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     }
 
+    //TODO : Remove this function
     public void SearchAdapterList(List<PeopleModel> people) {
         this.peopleModels = people;
         notifyDataSetChanged();
@@ -34,6 +35,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull SearchAdapter.ViewHolder holder, int position) {
+        //TODO: Dont make a new object
       PeopleModel people =peopleModels.get(position);
       holder.txtName.setText(people.getName());
       holder.txtBirthDate.setText(people.getBirthYear());
@@ -45,6 +47,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     }
 
+    //TODO: Use onBind
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtName, txtBirthDate;
         public ViewHolder(@NonNull View itemView) {

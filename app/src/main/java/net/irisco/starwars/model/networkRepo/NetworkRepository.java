@@ -4,6 +4,11 @@ import androidx.lifecycle.MutableLiveData;
 import net.irisco.starwars.pojo.ResultModel;
 import net.irisco.starwars.utils.RetrofitGenerator;
 
+import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -12,21 +17,10 @@ public class NetworkRepository {
     RetrofitInterface service =
             RetrofitGenerator.createService(RetrofitInterface.class);
 
-    MutableLiveData<ResultModel> resultData = new MutableLiveData<>();
+    public MutableLiveData<ResultModel> resultData = new MutableLiveData<>();
 
-    public MutableLiveData<ResultModel> getResult(String str) {
-        service.getPeople(str).enqueue(new Callback<ResultModel>() {
-            @Override
-            public void onResponse(Call<ResultModel> call, Response<ResultModel> response) {
-                resultData.postValue(response.body());
-            }
-
-            @Override
-            public void onFailure(Call<ResultModel> call, Throwable t) {
-
-            }
-        });
-        return resultData;
+    public Observable<ResultModel> getResult(String str) {
+        return service.getPeople(str);
     }
 
 
