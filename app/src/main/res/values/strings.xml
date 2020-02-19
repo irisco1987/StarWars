@@ -1,7 +1,15 @@
 <resources>
-    <string name="app_name">StarWars</string>
     <string name="please_enter_a_character_name">Character name</string>
     <string name="search">search</string>
     <string name="logo">logo</string>
+    <string name="app_name">StarWars </string>
+    <string name="hair_color">Hair Color : </string>
+    <string name="name">Name : </string>
+    <string name="height">Height : </string>
+    <string name="mass">Mass : </string>
+    <string name="skin_color">Skin Color : </string>
+    <string name="eye_color">Eye Color : </string>
+    <string name="birthday">Birth Year : </string>
+    <string name="gender">Gender : </string>
 
 </resources>

@@ -8,6 +8,7 @@ import net.irisco.starwars.pojo.ResultModel;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 public interface RetrofitInterface {
 
@@ -23,8 +24,8 @@ public interface RetrofitInterface {
     @GET("films/")
     Observable<FilmsModel> getFilms(@Query("id") String id);
 
-    @GET("people/")
-    Observable<PeopleModel> getPeoples(@Query("id") String id);
+    @GET
+    Observable<PeopleModel> getPeopleDetail(@Url String url);
 
 
 }
